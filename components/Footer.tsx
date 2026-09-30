@@ -11,38 +11,44 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-brown text-background">
-      <div className="container-studio py-16 grid gap-12 md:grid-cols-3">
+  <div className="container-studio py-16">
 
-        {/* Logo */}
+    <div className="grid lg:grid-cols-[1.3fr_1fr] gap-16">
+
+      {/* Kreisā puse */}
+      <div>
+        <Link href="/">
+          <Image
+            src="/logo.svg"
+            alt="Šēra Labsajūtas Studija"
+            width={240}
+            height={90}
+            className="h-24 w-auto"
+          />
+        </Link>
+
+        <p className="mt-8 max-w-lg text-background/80 leading-8">
+          Vieta, kur apstājas ikdienas steiga un sākas rūpes par
+          Tavu ķermeni, mieru un labsajūtu.
+        </p>
+      </div>
+
+      {/* Labā puse */}
+      <div className="grid sm:grid-cols-2 gap-10">
+
         <div>
-          <Link href="/">
-            <Image
-              src="/logo.svg"
-              alt="Šēra Labsajūtas Studija"
-              width={240}
-              height={90}
-              className="h-24 w-auto"
-            />
-          </Link>
+          <h3 className="font-heading text-xl mb-6">
+            Kontakti
+          </h3>
 
-          <p className="mt-6 max-w-sm text-background/75 leading-8">
-            Profesionālas masāžas un vaksācijas procedūras Tukumā.
-            Miers ķermenim. Līdzsvars prātam.
-          </p>
-        </div>
-
-        {/* Kontakti */}
-        <div>
-          <h3 className="font-heading text-xl mb-6">Kontakti</h3>
-
-          <div className="space-y-4">
+          <div className="space-y-5">
 
             <a
               href="tel:+37129704783"
               className="flex items-center gap-3 hover:text-gold transition"
             >
               <Phone size={18} />
-              29704783
+              +371 29704783
             </a>
 
             <a
@@ -58,39 +64,41 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Darba laiks */}
         <div>
           <h3 className="font-heading text-xl mb-6">
             Darba laiks
           </h3>
 
-          <div className="space-y-4">
+          <div className="space-y-5">
 
             <div className="flex items-center gap-3">
               <Clock size={18} />
               Pēc iepriekšēja pieraksta
             </div>
 
-            <p className="text-background/75 leading-7">
-              Vizītes iespējamas darba dienās un
-              brīvdienās pēc vienošanās.
+            <p className="text-background/70 leading-7">
+              Darba dienās un brīvdienās
+              pēc iepriekšējas vienošanās.
             </p>
 
           </div>
         </div>
+
       </div>
 
-      <div className="border-t border-background/10">
-        <div className="container-studio py-6 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-background/60">
+    </div>
 
-          <p>
-            © {new Date().getFullYear()} Šēra Labsajūtas Studija
-          </p>
+    <div className="mt-14 border-t border-background/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-background/60">
+      <p>
+        © {new Date().getFullYear()} Šēra Labsajūtas Studija
+      </p>
 
-          <p>Visas tiesības aizsargātas.</p>
+      <p>
+        Visas tiesības aizsargātas.
+      </p>
+    </div>
 
-        </div>
-      </div>
-    </footer>
+  </div>
+</footer>
   );
 }
