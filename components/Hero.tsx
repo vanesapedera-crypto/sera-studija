@@ -21,8 +21,8 @@ export default function Hero() {
     >
       <motion.div style={{ y }} className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2400&auto=format&fit=crop"
-          alt="Mierpilna spa telpa ar sveci un dabīgiem materiāliem"
+  src="/hero.jpg"
+            alt="Mierpilna spa telpa ar sveci un dabīgiem materiāliem"
           className="h-[130%] w-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-dark/60 via-dark/40 to-dark/70" />

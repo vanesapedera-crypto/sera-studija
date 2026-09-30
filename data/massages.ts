@@ -42,8 +42,7 @@ export const massages: Massage[] = [
     ],
     duration: "40 min",
     prices: [{ duration: "40 min", price: "30 €" }],
-    image:
-      "https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=1600&auto=format&fit=crop",
+    image: "/muguras.jpg",
     seoTitle: "Muguras masāža Tukumā",
     seoDescription:
       "Muguras masāža Šēra Labsajūtas Studijā — efektīvs risinājums saspringuma mazināšanai muguras, kakla un plecu zonā. 40 min, 30 €.",
@@ -74,8 +73,7 @@ export const massages: Massage[] = [
       { duration: "60 min", price: "35 €" },
       { duration: "90 min", price: "50 €" },
     ],
-    image:
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1600&auto=format&fit=crop",
+    image: "/klasiska-maaza.jpg",
     seoTitle: "Klasiskā ķermeņa masāža Tukumā",
     seoDescription:
       "Klasiskā ķermeņa masāža Šēra Labsajūtas Studijā — pilna ķermeņa relaksācija un pašsajūtas uzlabošana. 60 min no 35 €, 90 min no 50 €.",
@@ -103,8 +101,7 @@ export const massages: Massage[] = [
     ],
     duration: "75 min",
     prices: [{ duration: "75 min", price: "45 €" }],
-    image:
-      "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=1600&auto=format&fit=crop",
+   image: "/akmenu-masaza.jpg",
     seoTitle: "Karsto akmeņu masāža ar aromterapiju Tukumā",
     seoDescription:
       "Karsto akmeņu masāža ar aromterapiju Šēra Labsajūtas Studijā — dziļa relaksācija siltu akmeņu un aromātisko eļļu kombinācijā. 75 min, 45 €.",
@@ -134,8 +131,7 @@ export const massages: Massage[] = [
       { duration: "60 min", price: "40 €" },
       { duration: "90 min", price: "55 €" },
     ],
-    image:
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1600&auto=format&fit=crop",
+   image: "/zelta.jpg",
     seoTitle: "Relaksējoša masāža ar zeltu Tukumā",
     seoDescription:
       "Relaksējoša masāža ar zeltu Šēra Labsajūtas Studijā — luksusa procedūra pilnīgai relaksācijai. 60 min no 40 €, 90 min no 55 €.",
@@ -165,8 +161,7 @@ export const massages: Massage[] = [
       { duration: "60 min", price: "40 €" },
       { duration: "90 min", price: "55 €" },
     ],
-    image:
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1600&auto=format&fit=crop",
+    image: "/sokolades.jpg",
     seoTitle: "Šokolādes masāža Tukumā",
     seoDescription:
       "Šokolādes masāža Šēra Labsajūtas Studijā — barojoša procedūra, kas relaksē ķermeni un prātu. 60 min no 40 €, 90 min no 55 €.",
@@ -193,8 +188,7 @@ export const massages: Massage[] = [
     ],
     duration: "60 min",
     prices: [{ duration: "60 min", price: "40 €" }],
-    image:
-      "https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?q=80&w=1600&auto=format&fit=crop",
+    image: "/indian-foot-massage.jpg",
     seoTitle: "Indiešu pēdu masāža Tukumā",
     seoDescription:
       "Indiešu pēdu masāža Šēra Labsajūtas Studijā — pēdu refleksoloģija dziļai atpūtai. 60 min, 40 €.",
@@ -224,8 +218,7 @@ export const massages: Massage[] = [
       { duration: "60 min", price: "40 €" },
       { duration: "90 min", price: "55 €" },
     ],
-    image:
-      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1600&auto=format&fit=crop",
+    image: "/sport-massage.jpg",
     seoTitle: "Sporta masāža Tukumā",
     seoDescription:
       "Sporta masāža Šēra Labsajūtas Studijā — muskuļu atjaunošanai pēc fiziskas slodzes. 60 min no 40 €, 90 min no 55 €.",
@@ -255,8 +248,7 @@ export const massages: Massage[] = [
       { duration: "60 min", price: "35 €" },
       { duration: "90 min", price: "50 €" },
     ],
-    image:
-      "https://images.unsplash.com/photo-1519824145371-296894a0daa9?q=80&w=1600&auto=format&fit=crop",
+    image: "/anticelulita-masaza.jpg",
     seoTitle: "Anticelulīta masāža Tukumā",
     seoDescription:
       "Anticelulīta masāža Šēra Labsajūtas Studijā — veicina limfas atteci un uzlabo ādas tonusu. 60 min no 35 €, 90 min no 50 €.",
@@ -282,8 +274,7 @@ export const massages: Massage[] = [
     ],
     duration: "90 min",
     prices: [{ duration: "90 min", price: "50 €" }],
-    image:
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1600&auto=format&fit=crop",
+   image: "/grutniecu-masaza.jpg",
     seoTitle: "Grūtnieču masāža Tukumā",
     seoDescription:
       "Grūtnieču masāža Šēra Labsajūtas Studijā — saudzīga procedūra topošajām māmiņām. 90 min, 50 €.",
@@ -313,8 +304,7 @@ export const massages: Massage[] = [
       { duration: "60 min", price: "45 €" },
       { duration: "90 min", price: "60 €" },
     ],
-    image:
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1600&auto=format&fit=crop",
+   image: "/medus.jpg",
     seoTitle: "Medus masāža Tukumā",
     seoDescription:
       "Medus masāža Šēra Labsajūtas Studijā — dabīga detoksikācijas un relaksācijas procedūra. 60 min no 45 €, 90 min no 60 €.",
