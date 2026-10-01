@@ -20,9 +20,10 @@ function config() {
     url: `${url.replace(/\/$/, "")}/rest/v1/reviews`,
     headers: {
       apikey: key,
-      Authorization: `Bearer ${key}`,
+      // Jaunās "sb_secret_..." atslēgas der tikai apikey galvenē; vecā service_role arī Authorization.
+      ...(key.startsWith("sb_") ? {} : { Authorization: `Bearer ${key}` }),
       "Content-Type": "application/json",
-    },
+    } as Record<string, string>,
   };
 }
 
