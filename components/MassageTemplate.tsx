@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Check, Users } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, CircleAlert, Sparkles, Users } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Button from "@/components/Button";
 import ServiceCard from "@/components/ServiceCard";
@@ -9,7 +9,14 @@ import {
   getRelatedMassages,
 } from "@/data/massages";
 
-export default function MassageTemplate({ massage }: { massage: Massage }) {
+export default function MassageTemplate({
+  massage,
+  standalone = false,
+}: {
+  massage: Massage;
+  /** Atsevišķa sadaļa ārpus masāžu saraksta (bez "Masāžas" ceļā un bez iepriekšējā/nākamā). */
+  standalone?: boolean;
+}) {
   const { prev, next } = getAdjacentMassages(massage.slug);
   const related = getRelatedMassages(massage.slug, 3);
 
@@ -36,7 +43,7 @@ export default function MassageTemplate({ massage }: { massage: Massage }) {
         <Breadcrumbs
           items={[
             { label: "Sākums", href: "/" },
-            { label: "Masāžas", href: "/masazas" },
+            ...(standalone ? [] : [{ label: "Masāžas", href: "/masazas" }]),
             { label: massage.title },
           ]}
         />
@@ -60,6 +67,25 @@ export default function MassageTemplate({ massage }: { massage: Massage }) {
                 </p>
               ))}
             </div>
+
+            {massage.includes && massage.includes.length > 0 && (
+              <div className="mt-12">
+                <h2 className="font-heading text-2xl text-brown">
+                  Procedūrā ietilpst
+                </h2>
+                <ul className="mt-5 flex flex-col gap-3">
+                  {massage.includes.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 font-body text-sm text-dark/75"
+                    >
+                      <Sparkles size={18} className="mt-0.5 shrink-0 text-gold" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="mt-12">
               <h2 className="font-heading text-2xl text-brown">Ieguvumi</h2>
@@ -92,6 +118,29 @@ export default function MassageTemplate({ massage }: { massage: Massage }) {
                 ))}
               </ul>
             </div>
+
+            {massage.contraindications &&
+              massage.contraindications.length > 0 && (
+                <div className="mt-12">
+                  <h2 className="font-heading text-2xl text-brown">
+                    Kontrindikācijas
+                  </h2>
+                  <ul className="mt-5 flex flex-col gap-3">
+                    {massage.contraindications.map((c) => (
+                      <li
+                        key={c}
+                        className="flex items-start gap-3 font-body text-sm text-dark/75"
+                      >
+                        <CircleAlert
+                          size={18}
+                          className="mt-0.5 shrink-0 text-gold"
+                        />
+                        {c}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
           </div>
 
           {/* Sidebar */}
@@ -103,6 +152,11 @@ export default function MassageTemplate({ massage }: { massage: Massage }) {
               <p className="mt-1 font-heading text-2xl text-brown">
                 {massage.duration}
               </p>
+              {massage.durationNote && (
+                <p className="mt-1 font-body text-sm italic text-dark/55">
+                  {massage.durationNote}
+                </p>
+              )}
 
               <div className="mt-6 flex flex-col gap-2 border-t border-beige pt-6">
                 {massage.prices.map((p) => (
@@ -130,7 +184,9 @@ export default function MassageTemplate({ massage }: { massage: Massage }) {
       <section className="bg-beige/20 py-20 md:py-24">
         <div className="container-studio">
           <h2 className="font-heading text-3xl md:text-4xl text-brown text-center">
-            Citas masāžas, kas Jums varētu patikt
+            {standalone
+              ? "Masāžas, kas Jums varētu patikt"
+              : "Citas masāžas, kas Jums varētu patikt"}
           </h2>
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((m, i) => (
@@ -149,6 +205,7 @@ export default function MassageTemplate({ massage }: { massage: Massage }) {
       </section>
 
       {/* Prev / Next */}
+      {!standalone && (
       <section className="container-studio py-14">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Link
@@ -184,6 +241,7 @@ export default function MassageTemplate({ massage }: { massage: Massage }) {
           </Link>
         </div>
       </section>
+      )}
     </div>
   );
 }

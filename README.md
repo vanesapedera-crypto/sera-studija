@@ -22,9 +22,11 @@ npm run start
 
 - `/` — Homepage (hero + short intro only)
 - `/par-mani` — About
+- `/japanu-galvas-spa` — Japanese head spa (standalone page, data in `data/headSpa.ts`, reuses `MassageTemplate` with `standalone`)
 - `/masazas` — Massages overview (cards linking to each dedicated page)
 - `/masazas/<slug>` — Ten static routes, one per massage, each with its own folder, `page.tsx`, and dedicated component in `components/massages/`
 - `/vaksacija` — Waxing (pricing cards)
+- `/atsauksmes` — Reviews: public form, reviews appear instantly (Supabase, see `supabase/reviews.sql` and `.env.example`). Delete unwanted reviews in Supabase → Table Editor → reviews.
 - `/kontakti` — Contacts (info, map, CTA)
 
 ## Massage pages architecture

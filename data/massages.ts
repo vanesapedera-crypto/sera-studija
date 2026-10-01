@@ -13,6 +13,12 @@ export interface Massage {
   suitableFor: string[];
   duration: string;
   prices: MassagePrice[];
+  /** Neobligāti: ko ietver procedūra */
+  includes?: string[];
+  /** Neobligāti: kontrindikācijas */
+  contraindications?: string[];
+  /** Neobligāti: piezīme pie ilguma, piem. "+ matu žāvēšana" */
+  durationNote?: string;
   image: string;
   seoTitle: string;
   seoDescription: string;
@@ -42,7 +48,7 @@ export const massages: Massage[] = [
     ],
     duration: "40 min",
     prices: [{ duration: "40 min", price: "30 €" }],
-    image: "/muguras.jpg",
+    image: "/klasiska-maaza.jpg",
     seoTitle: "Muguras masāža Tukumā",
     seoDescription:
       "Muguras masāža Šēra Labsajūtas Studijā — efektīvs risinājums saspringuma mazināšanai muguras, kakla un plecu zonā. 40 min, 30 €.",
@@ -73,7 +79,7 @@ export const massages: Massage[] = [
       { duration: "60 min", price: "35 €" },
       { duration: "90 min", price: "50 €" },
     ],
-    image: "/klasiska-maaza.jpg",
+    image: "/muguras.jpg",
     seoTitle: "Klasiskā ķermeņa masāža Tukumā",
     seoDescription:
       "Klasiskā ķermeņa masāža Šēra Labsajūtas Studijā — pilna ķermeņa relaksācija un pašsajūtas uzlabošana. 60 min no 35 €, 90 min no 50 €.",

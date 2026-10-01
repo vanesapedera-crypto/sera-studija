@@ -10,8 +10,10 @@ import { Menu, X } from "lucide-react";
 const links = [
   { href: "/", label: "Sākums" },
   { href: "/par-mani", label: "Par mani" },
+  { href: "/japanu-galvas-spa", label: "Japāņu galvas spa" },
   { href: "/masazas", label: "Masāžas" },
   { href: "/vaksacija", label: "Vaksācija" },
+  { href: "/atsauksmes", label: "Atsauksmes" },
   { href: "/kontakti", label: "Kontakti" },
 ];
 
