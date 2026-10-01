@@ -32,12 +32,12 @@ export default function Hero() {
         <img
           src="/hero-mobile.jpg"
           alt="Šēra Labsajūtas Studija"
-          className="block md:hidden h-[130%] w-full object-cover object-center brightness-95"
+          className="block md:hidden h-[130%] w-full object-cover object-center"
         />
 
         {/* Overlay */}
         <div className="hidden md:block absolute inset-0 bg-gradient-to-b from-dark/60 via-dark/40 to-dark/70" />
-        <div className="block md:hidden absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/45" />
+        <div className="block md:hidden absolute inset-0 bg-gradient-to-b from-dark/60 via-dark/40 to-dark/70" />
       </motion.div>
 
       <motion.div
