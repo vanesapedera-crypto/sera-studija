@@ -40,7 +40,7 @@ export default async function AtsauksmesPage() {
     <div>
       <PageHeader
         title="Atsauksmes"
-        description="Paldies ikvienam, kurš dalās ar savu pieredzi. Jūsu vārdi mums ir ļoti svarīgi."
+        description="Jūsu pieredze iedvesmo mani turpināt."
       />
 
       <section className="container-studio py-20 md:py-24">
