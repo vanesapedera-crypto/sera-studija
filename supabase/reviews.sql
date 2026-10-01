@@ -10,3 +10,6 @@ create table if not exists public.reviews (
 
 -- Pārlūkam piekļuves nav; lapa lasa/raksta caur serveri ar service_role atslēgu.
 alter table public.reviews enable row level security;
+
+-- Serverim (service_role) vajadzīgās tiesības
+grant select, insert, delete on public.reviews to service_role;
