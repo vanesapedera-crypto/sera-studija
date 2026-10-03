@@ -54,7 +54,7 @@ export default function ParManiPage() {
 
           <div className="mt-8 space-y-6 font-body text-base leading-8 text-dark/75">
             <p>
-              Esmu sertificēta masiere, trīs dēlu mamma un sieviete, kura tic,
+              Es esmu estētiskās ķermeņa kopšanas speciāliste, trīs dēlu mamma un sieviete, kura tic,
               ka rūpes par sevi nav greznība, bet nepieciešamība.
             </p>
 
